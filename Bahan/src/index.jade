@@ -11,7 +11,7 @@ html
 
     article
 
-      //1<<<<<<< HEAD
+      //1
 
       section.warna
         ul
@@ -102,23 +102,54 @@ html
         h1  Start
       //15
       section.gambar
-        div.hasil   <a href="">HASIL</a>
+        div.hasil   HASIL
         div.pilih   PILIH GAMBAR
         br
         div.kiri
-            div.kotak   <a href="" >Gambar 1</a>
-            div.kotak   <a href="">Gambar 3</a>
-            div.kotak   <a href="">Gambar 5</a>
-            div.kotak   <a href="">Gambar 7</a>
-            div.kotak   <a href="">Gambar 9</a>
+            div.kotak(onclick="Picture(0)") Gambar 1
+            div.kotak(onclick="Picture(2)") Gambar 3
+            div.kotak(onclick="Picture(4)") Gambar 5
+            div.kotak(onclick="Picture(6)") Gambar 7
+            div.kotak(onclick="Picture(8)") Gambar 9
         div.kanan
-            div.kotak   <a href="">Gambar 2</a>
-            div.kotak   <a href="">Gambar 4</a>
-            div.kotak   <a href="">Gambar 6</a>
-            div.kotak   <a href="">Gambar 8</a>
-            div.kotak   <a href="">Gambar 10</a>
+            div.kotak(onclick="Picture(1)") Gambar 2
+            div.kotak(onclick="Picture(3)") Gambar 4
+            div.kotak(onclick="Picture(5)") Gambar 6
+            div.kotak(onclick="Picture(7)") Gambar 8
+            div.kotak(onclick="Picture(9)") Gambar 10
       //sampai 25
-      
+      section(onmouseenter="load()")
+        div#gambar
+        div.keyboard
+          div.keys(onclick="addLetter(A)") A
+          div.keys(onclick="addLetter(B)") B
+          div.keys(onclick="addLetter(C)") C
+          div.keys(onclick="addLetter(D)") D
+          div.keys(onclick="addLetter(E)") E
+          div.keys(onclick="addLetter(F)") F
+          div.keys(onclick="addLetter(G)") G
+          div.keys(onclick="addLetter(H)") H
+          div.keys(onclick="addLetter(I)") I
+          div.keys(onclick="addLetter(J)") J
+          div.keys(onclick="addLetter(K)") K
+          div.keys(onclick="addLetter(L)") L
+          div.keys(onclick="addLetter(M)") M
+          div.keys(onclick="addLetter(N)") N
+          div.keys(onclick="addLetter(O)") O
+          div.keys(onclick="addLetter(P)") P
+          div.keys(onclick="addLetter(Q)") Q
+          div.keys(onclick="addLetter(R)") R
+          div.keys(onclick="addLetter(S)") S
+          div.keys(onclick="addLetter(T)") T
+          div.keys(onclick="addLetter(U)") U
+          div.keys(onclick="addLetter(V)") V
+          div.keys(onclick="addLetter(W)") W
+          div.keys(onclick="addLetter(X)") X
+          div.keys(onclick="addLetter(Y)") Y
+          div.keys(onclick="addLetter(Z)") Z
+        div.ansboard
+          div.ans
+          div#letter 0 letter(s)
       section
         ul
           li.font Tujuan
@@ -126,8 +157,9 @@ html
       section
 
         h1.fonts Special Thanks to:
-        h2.fontss Regards
-        h2.fontsss Anonymous
+      section
+        h4.fontss Regards
+        h4.fontsss Anonymous
 
         h1  Thanks
         h2  Regards
@@ -135,3 +167,108 @@ html
       
 
     script(src='build/build.js')
+    script.
+      var lvalue = 10
+      var rvalue = 10
+      var imgNo = 0
+      var numltr = document.getElementById('letter').innerHTML
+      var ltr = ""
+      var answer1 = ['B','A','R','R','A','C','K',' ','O','B','A','M','A']
+      var answer2 = ['D','A','V','I','D',' ','B','E','C','K','H','A','M']
+      var answer3 = ['P','E','W','D','I','E','P','I','E']
+      var answer4 = ['J','A','C','K','I','E',' ','C','H','A','N']
+      var answer5 = ['J','E','T',' ','L','E','E']
+      var answer6 = ['J','O','K','O',' ','W','I','D','O','D','O']
+      var answer7 = ['K','A','T','Y',' ','P','E','R','R','Y']
+      var answer8 = ['M','R',' ','B','E','A','N']
+      var answer9 = ['V','I','N',' ','D','I','E','S','E','L']
+      var answer10 = ['W','I','L','L','I','A','M']
+      var keys = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+      function load(){
+        if(imgNo == 0) { 
+          numltr = "12 letter(s)"
+        }
+        if(imgNo == 1) { 
+          
+        }
+        if(imgNo == 2) { 
+          
+        }
+        if(imgNo == 3) { 
+
+        }
+        if(imgNo == 4) { 
+          
+        }
+        if(imgNo == 5) { 
+          
+        }
+        if(imgNo == 6) { 
+
+        }
+        if(imgNo == 7) { 
+          
+        }
+        if(imgNo == 8) { 
+          
+        }
+        if(imgNo == 9) { 
+          
+        }
+      }
+
+      function Picture(Num){ 
+        imgNo = Num 
+        ltr = ""
+        alert(Num)
+      }
+
+      function addLetter(Letter) { 
+        ltr = Letter
+        if(imgNo == 0) {
+          alert(numltr)
+          for(var i = 0; i < 13; i++) {
+            if(answer1[i] == Letter) {
+              ltr += Letter
+            }
+            else {
+              ltr += " "
+            }
+          }
+        }
+      }
+
+      function imgLoad() {
+        if(imgNo == 0) { 
+
+        }
+        if(imgNo == 1) { 
+          
+        }
+        if(imgNo == 2) { 
+          
+        }
+        if(imgNo == 3) { 
+
+        }
+        if(imgNo == 4) { 
+          
+        }
+        if(imgNo == 5) { 
+          
+        }
+        if(imgNo == 6) { 
+
+        }
+        if(imgNo == 7) { 
+          
+        }
+        if(imgNo == 8) { 
+          
+        }
+        if(imgNo == 9) { 
+          
+        }
+      }
+
+
