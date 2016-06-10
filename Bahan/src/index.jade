@@ -12,10 +12,6 @@ html
     article
 
       //1
-<<<<<<< HEAD
-
-=======
->>>>>>> 9a6a74b57ff46a76a486ce023c39473f3c3629ed
       section.warna
         ul
           li
@@ -121,8 +117,10 @@ html
         h1  Start
       //15
       section.gambar
-        div.hasil   HASIL
-        div.pilih   PILIH GAMBAR
+        div.hasil 
+          h2 HASIL
+        div.pilih 
+          h3(style="font-weight:bold") PILIH GAMBAR
         br
         div.kiri
             div.kotak(onclick="Picture(0)") Gambar 1
@@ -136,45 +134,72 @@ html
             div.kotak(onclick="Picture(5)") Gambar 6
             div.kotak(onclick="Picture(7)") Gambar 8
             div.kotak(onclick="Picture(9)") Gambar 10
+        div#MrLeft 0
+        div#MrsRight 0
       //sampai 25
-<<<<<<< HEAD
-      section(onmouseenter="load()")
-        div#gambar
+
+      section.full(onmouseenter="load()")
+        div.gabung
+          div.chint 
+            div.bar.first H
+            div.bar I
+            div.bar N
+            div.bar T
+            div.bar.last S
+          div.image(onclick="hinted()")
+            img#gambar
+          div.score
+            div.sTitle 
+              span LP
+            div.sBar
+              div.sRect
+              div.sRect
+              div.sRect
+              div.sRect
+              div.sRect
+              div.sRect
+              div.sRect
+              div.sRect
+              div.sRect
+              div.sRect
+            div.sPoint 
+              div.sleft
+              div.point 10
+              div.sright
+
         div.keyboard
-          div.keys(onclick="addLetter(A)") A
-          div.keys(onclick="addLetter(B)") B
-          div.keys(onclick="addLetter(C)") C
-          div.keys(onclick="addLetter(D)") D
-          div.keys(onclick="addLetter(E)") E
-          div.keys(onclick="addLetter(F)") F
-          div.keys(onclick="addLetter(G)") G
-          div.keys(onclick="addLetter(H)") H
-          div.keys(onclick="addLetter(I)") I
-          div.keys(onclick="addLetter(J)") J
-          div.keys(onclick="addLetter(K)") K
-          div.keys(onclick="addLetter(L)") L
-          div.keys(onclick="addLetter(M)") M
-          div.keys(onclick="addLetter(N)") N
-          div.keys(onclick="addLetter(O)") O
-          div.keys(onclick="addLetter(P)") P
-          div.keys(onclick="addLetter(Q)") Q
-          div.keys(onclick="addLetter(R)") R
-          div.keys(onclick="addLetter(S)") S
-          div.keys(onclick="addLetter(T)") T
-          div.keys(onclick="addLetter(U)") U
-          div.keys(onclick="addLetter(V)") V
-          div.keys(onclick="addLetter(W)") W
-          div.keys(onclick="addLetter(X)") X
-          div.keys(onclick="addLetter(Y)") Y
-          div.keys(onclick="addLetter(Z)") Z
+          div.keys.choose(onclick="addLetter('A', 0)") A
+          div.keys.choose(onclick="addLetter('B', 1)") B
+          div.keys.choose(onclick="addLetter('C', 2)") C
+          div.keys.choose(onclick="addLetter('D', 3)") D
+          div.keys.choose(onclick="addLetter('E', 4)") E
+          div.keys.choose(onclick="addLetter('F', 5)") F
+          div.keys.choose(onclick="addLetter('G', 6)") G
+          div.keys.choose(onclick="addLetter('H', 7)") H
+          div.keys.choose(onclick="addLetter('I', 8)") I
+          div.keys.choose(onclick="addLetter('J', 9)") J
+          div.keys.choose(onclick="addLetter('K', 10)") K
+          div.keys.choose(onclick="addLetter('L', 11)") L
+          div.keys.choose(onclick="addLetter('M', 12)") M
+          div.keys.choose(onclick="addLetter('N', 13)") N
+          div.keys.choose(onclick="addLetter('O', 14)") O
+          div.keys.choose(onclick="addLetter('P', 15)") P
+          div.keys.choose(onclick="addLetter('Q', 16)") Q
+          div.keys.choose(onclick="addLetter('R', 17)") R
+          div.keys.choose(onclick="addLetter('S', 18)") S
+          div.keys.choose(onclick="addLetter('T', 19)") T
+          div.keys.choose(onclick="addLetter('U', 20)") U
+          div.keys.choose(onclick="addLetter('V', 21)") V
+          div.keys.choose(onclick="addLetter('W', 22)") W
+          div.keys.choose(onclick="addLetter('X', 23)") X
+          div.keys.choose(onclick="addLetter('Y', 24)") Y
+          div.keys.choose(onclick="addLetter('Z', 25)") Z
         div.ansboard
-          div.ans
+          div#answer.ans
           div#letter 0 letter(s)
-      section
-=======
-      
+      section(onmouseenter="resulted()")
+        h1#result 0
       section.warna14
->>>>>>> 9a6a74b57ff46a76a486ce023c39473f3c3629ed
         ul
           li
           li.t  Tujuan
@@ -183,8 +208,6 @@ html
           h2.fontss Regards
           h2.fontsss Anonymous
       section
-<<<<<<< HEAD
-
         h1.fonts Special Thanks to:
       section
         h4.fontss Regards
@@ -193,115 +216,7 @@ html
         h1  Thanks
         h2  Regards
         h2  Team
-      
-
-    script(src='build/build.js')
-    script.
-      var lvalue = 10
-      var rvalue = 10
-      var imgNo = 0
-      var numltr = document.getElementById('letter').innerHTML
-      var ltr = ""
-      var answer1 = ['B','A','R','R','A','C','K',' ','O','B','A','M','A']
-      var answer2 = ['D','A','V','I','D',' ','B','E','C','K','H','A','M']
-      var answer3 = ['P','E','W','D','I','E','P','I','E']
-      var answer4 = ['J','A','C','K','I','E',' ','C','H','A','N']
-      var answer5 = ['J','E','T',' ','L','E','E']
-      var answer6 = ['J','O','K','O',' ','W','I','D','O','D','O']
-      var answer7 = ['K','A','T','Y',' ','P','E','R','R','Y']
-      var answer8 = ['M','R',' ','B','E','A','N']
-      var answer9 = ['V','I','N',' ','D','I','E','S','E','L']
-      var answer10 = ['W','I','L','L','I','A','M']
-      var keys = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
-      function load(){
-        if(imgNo == 0) { 
-          numltr = "12 letter(s)"
-        }
-        if(imgNo == 1) { 
-          
-        }
-        if(imgNo == 2) { 
-          
-        }
-        if(imgNo == 3) { 
-
-        }
-        if(imgNo == 4) { 
-          
-        }
-        if(imgNo == 5) { 
-          
-        }
-        if(imgNo == 6) { 
-
-        }
-        if(imgNo == 7) { 
-          
-        }
-        if(imgNo == 8) { 
-          
-        }
-        if(imgNo == 9) { 
-          
-        }
-      }
-
-      function Picture(Num){ 
-        imgNo = Num 
-        ltr = ""
-        alert(Num)
-      }
-
-      function addLetter(Letter) { 
-        ltr = Letter
-        if(imgNo == 0) {
-          alert(numltr)
-          for(var i = 0; i < 13; i++) {
-            if(answer1[i] == Letter) {
-              ltr += Letter
-            }
-            else {
-              ltr += " "
-            }
-          }
-        }
-      }
-
-      function imgLoad() {
-        if(imgNo == 0) { 
-
-        }
-        if(imgNo == 1) { 
-          
-        }
-        if(imgNo == 2) { 
-          
-        }
-        if(imgNo == 3) { 
-
-        }
-        if(imgNo == 4) { 
-          
-        }
-        if(imgNo == 5) { 
-          
-        }
-        if(imgNo == 6) { 
-
-        }
-        if(imgNo == 7) { 
-          
-        }
-        if(imgNo == 8) { 
-          
-        }
-        if(imgNo == 9) { 
-          
-        }
-      }
-
-
-=======
+      section
         h1.font Special Thanks to:
         h1.fon Hendra
         h1.fon Kelvin
@@ -313,5 +228,444 @@ html
         h1.fon Martin Leonardi
         h2.fonts.margin Regards
         h2.fonts.margin Anonymous
+      
+
     script(src='build/build.js')
->>>>>>> 9a6a74b57ff46a76a486ce023c39473f3c3629ed
+    script.
+      var imgNo = 10
+      var numltr = document.getElementById('letter')
+      var image = document.getElementById('gambar')
+      var answer = document.getElementById('answer')
+      var temp = "";
+      var ltr = ""
+      var lives = 0;
+      var Lvalue = 0;
+      var Rvalue = 0;
+      var correct = 0;
+      var right = 0;
+      var wrong = 0;
+      var hint = 0;
+      var temp = new Array(0);
+      var slots = new Array(0);
+      var sloted = false;
+      var nohint = false;
+      var M = false;
+      var F = true;
+      var sHint = 5;
+      var sPoint = 10;
+      var answer1 = ['B','A','R','A','C','K',' ','O','B','A','M','A']
+      var answer2 = ['D','A','V','I','D',' ','B','E','C','K','H','A','M']
+      var answer3 = ['P','E','W','D','I','E','P','I','E']
+      var answer4 = ['J','A','C','K','I','E',' ','C','H','A','N']
+      var answer5 = ['J','E','T',' ','L','E','E']
+      var answer6 = ['J','O','K','O',' ','W','I','D','O','D','O']
+      var answer7 = ['K','A','T','Y',' ','P','E','R','R','Y']
+      var answer8 = ['M','R',' ','B','E','A','N']
+      var answer9 = ['V','I','N',' ','D','I','E','S','E','L']
+      var answer10 = ['W','I','L','L','I','A','M']
+      var pic = [false, false, false, false, false, false, false, false, false, false]
+      var used = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+      var b;
+      for(b = 0; b < sHint; b++) { document.getElementsByClassName('bar')[b].style.backgroundColor = "lime"; }
+      for(b = 0; b < sPoint; b++) { document.getElementsByClassName('sRect')[b].style.backgroundColor = "white"; }
+
+      function load(){
+        if(imgNo == 0) { image.src = "images/Barack Obama/1.jpg"; numltr.innerHTML = "11 letter(s)" }
+        if(imgNo == 1) { image.src = "images/David Beckham/1.jpg"; numltr.innerHTML = "12 letter(s)" }
+        if(imgNo == 2) { image.src = "images/Pewdiepie/1.jpg"; numltr.innerHTML = "9 letter(s)" }
+        if(imgNo == 3) { image.src = "images/Jackie Chan/1.jpg"; numltr.innerHTML = "10 letter(s)" }
+        if(imgNo == 4) { image.src = "images/Jet Lee/1.jpg"; numltr.innerHTML = "6 letter(s)" }
+        if(imgNo == 5) { image.src = "images/Joko Widodo/1.jpg"; numltr.innerHTML = "10 letter(s)" }
+        if(imgNo == 6) { image.src = "images/Katy Perry/1.jpg"; numltr.innerHTML = "9 letter(s)" }
+        if(imgNo == 7) { image.src = "images/Mr Bean/1.jpg"; numltr.innerHTML = "6 letter(s)" }
+        if(imgNo == 8) { image.src = "images/Vin Diesel/1.jpg"; numltr.innerHTML = "9 letter(s)" }
+        if(imgNo == 9) { image.src = "images/William/1.jpg"; numltr.innerHTML = "7 letter(s)" }
+      }
+
+      function Picture(Num){ 
+        if (!pic[Num]) {
+          pic[Num] = true
+          imgNo = Num 
+          ltr = ""
+          answer.innerHTML = ""
+          correct = 0
+          hint = 0
+          sPoint = 10
+          temp = new Array(0);
+          slots = new Array(0);
+          sloted = false;
+          nohint = false;
+          used = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
+          var i
+          image.src = "";
+          for (i = 0; i < 26; i++) { document.getElementsByClassName('keys')[i].className = "keys choose"; }
+          for(b = 0; b < sPoint; b++) { document.getElementsByClassName('sRect')[b].style.backgroundColor = "white"; }
+          document.getElementsByClassName('point')[0].innerHTML = sPoint + "";
+          window.location.href = "#15";
+        }
+      }
+
+      function addLetter(Letter, Num) { 
+        ltr = ' ';
+        if (!used[0] && Letter == 'A'){ used[0] = true; ltr = 'A'; slot(); judge(ltr, Num); }
+        else if (!used[1] && Letter == 'B'){ used[1] = true; ltr = 'B'; slot(); judge(ltr, Num); }
+        else if (!used[2] && Letter == 'C'){ used[2] = true; ltr = 'C'; slot(); judge(ltr, Num); }
+        else if (!used[3] && Letter == 'D'){ used[3] = true; ltr = 'D'; slot(); judge(ltr, Num); }
+        else if (!used[4] && Letter == 'E'){ used[4] = true; ltr = 'E'; slot(); judge(ltr, Num); }
+        else if (!used[5] && Letter == 'F'){ used[5] = true; ltr = 'F'; slot(); judge(ltr, Num); }
+        else if (!used[6] && Letter == 'G'){ used[6] = true; ltr = 'G'; slot(); judge(ltr, Num); }
+        else if (!used[7] && Letter == 'H'){ used[7] = true; ltr = 'H'; slot(); judge(ltr, Num); }
+        else if (!used[8] && Letter == 'I'){ used[8] = true; ltr = 'I'; slot(); judge(ltr, Num); }
+        else if (!used[9] && Letter == 'J'){ used[9] = true; ltr = 'J'; slot(); judge(ltr, Num); }
+        else if (!used[10] && Letter == 'K'){ used[10] = true; ltr = 'K'; slot(); judge(ltr, Num); }
+        else if (!used[11] && Letter == 'L'){ used[11] = true; ltr = 'L'; slot(); judge(ltr, Num); }
+        else if (!used[12] && Letter == 'M'){ used[12] = true; ltr = 'M'; slot(); judge(ltr, Num); }
+        else if (!used[13] && Letter == 'N'){ used[13] = true; ltr = 'N'; slot(); judge(ltr, Num); }
+        else if (!used[14] && Letter == 'O'){ used[14] = true; ltr = 'O'; slot(); judge(ltr, Num); }
+        else if (!used[15] && Letter == 'P'){ used[15] = true; ltr = 'P'; slot(); judge(ltr, Num); }
+        else if (!used[16] && Letter == 'Q'){ used[16] = true; ltr = 'Q'; slot(); judge(ltr, Num); }
+        else if (!used[17] && Letter == 'R'){ used[17] = true; ltr = 'R'; slot(); judge(ltr, Num); }
+        else if (!used[18] && Letter == 'S'){ used[18] = true; ltr = 'S'; slot(); judge(ltr, Num); }
+        else if (!used[19] && Letter == 'T'){ used[19] = true; ltr = 'T'; slot(); judge(ltr, Num); }
+        else if (!used[20] && Letter == 'U'){ used[20] = true; ltr = 'U'; slot(); judge(ltr, Num); }
+        else if (!used[21] && Letter == 'V'){ used[21] = true; ltr = 'V'; slot(); judge(ltr, Num); }
+        else if (!used[22] && Letter == 'W'){ used[22] = true; ltr = 'W'; slot(); judge(ltr, Num); }
+        else if (!used[23] && Letter == 'X'){ used[23] = true; ltr = 'X'; slot(); judge(ltr, Num); }
+        else if (!used[24] && Letter == 'Y'){ used[24] = true; ltr = 'Y'; slot(); judge(ltr, Num); }
+        else if (!used[25] && Letter == 'Z'){ used[25] = true; ltr = 'Z'; slot(); judge(ltr, Num); }
+      }
+
+      function judge(Letter, Num) {
+        document.getElementsByClassName('keys')[Num].className = "keys used";
+        lives = 0
+        if(sPoint > 0) {
+          if(imgNo == 0) {
+            var i;
+            for (i = 0; i < slots.length; i++) {
+              if (!slots[i] && answer1[i] == Letter) { slots[i] = true; temp[i] = Letter; correct++; right++; }
+              else if (answer1[i] == ' ') { temp[i] = '#';}
+              else if (!slots[i] && answer1[i] != Letter) { wrong++; }
+            }
+            answer.innerHTML = ""
+            for (i = 0; i < temp.length; i++) { answer.innerHTML += temp[i]; }
+            if (right > 0) { right = 0; wrong = 0; }
+            else if (right == 0 && wrong > 0) { lives++; wrong = 0; }
+            if (correct == 11) { 
+              image.src = "images/Barack Obama/6.jpg"; 
+              if(M) { Lvalue += sPoint; M = false; F = true; document.getElementById('MrLeft').innerHTML = Lvalue + ""; }
+              else if(F) { Rvalue += sPoint; M = true; F = false; document.getElementById('MrsRight').innerHTML = Rvalue + ""; }
+              window.location.href = "#14";
+            }
+          }
+          else if(imgNo == 1) {
+            var i;
+            for (i = 0; i < slots.length; i++) {
+              if (!slots[i] && answer2[i] == Letter) { slots[i] = true; temp[i] = Letter; correct++; right++; }
+              else if (answer2[i] == ' ') { temp[i] = '#';}
+              else if (!slots[i] && answer2[i] != Letter) { wrong++; }
+            }
+            answer.innerHTML = ""
+            for (i = 0; i < temp.length; i++) { answer.innerHTML += temp[i]; }
+            if (right > 0) { right = 0; wrong = 0; }
+            else if (right == 0 && wrong > 0) { lives++; wrong = 0; }
+            if (correct == 12) { 
+              image.src = "images/David Beckham/6.jpg";
+              if(M) { Lvalue += sPoint; M = false; F = true; document.getElementById('MrLeft').innerHTML = Lvalue + ""; }
+              else if(F) { Rvalue += sPoint; M = true; F = false; document.getElementById('MrsRight').innerHTML = Rvalue + ""; }
+              window.location.href = "#14";
+            }
+          }
+          else if(imgNo == 2) {
+            var i;
+            for (i = 0; i < slots.length; i++) {
+              if (!slots[i] && answer3[i] == Letter) { slots[i] = true; temp[i] = Letter; correct++; right++; }
+              else if (answer3[i] == ' ') { temp[i] = '#';}
+              else if (!slots[i] && answer3[i] != Letter) { wrong++; }
+            }
+            answer.innerHTML = ""
+            for (i = 0; i < temp.length; i++) { answer.innerHTML += temp[i]; }
+            if (right > 0) { right = 0; wrong = 0; }
+            else if (right == 0 && wrong > 0) { lives++; wrong = 0; }
+            if (correct == 9) { 
+              image.src = "images/Pewdiepie/6.jpg";
+              if(M) { Lvalue += sPoint; M = false; F = true; document.getElementById('MrLeft').innerHTML = Lvalue + ""; }
+              else if(F) { Rvalue += sPoint; M = true; F = false; document.getElementById('MrsRight').innerHTML = Rvalue + ""; } 
+              window.location.href = "#14";
+            }
+          }
+          else if(imgNo == 3) {
+            var i;
+            for (i = 0; i < slots.length; i++) {
+              if (!slots[i] && answer4[i] == Letter) { slots[i] = true; temp[i] = Letter; correct++; right++; }
+              else if (answer4[i] == ' ') { temp[i] = '#';}
+              else if (!slots[i] && answer4[i] != Letter) { wrong++; }
+            }
+            answer.innerHTML = ""
+            for (i = 0; i < temp.length; i++) { answer.innerHTML += temp[i]; }
+            if (right > 0) { right = 0; wrong = 0; }
+            else if (right == 0 && wrong > 0) { lives++; wrong = 0; }
+            if (correct == 10) { 
+              image.src = "images/Jackie Chan/6.jpg"; 
+              if(M) { Lvalue += sPoint; M = false; F = true; document.getElementById('MrLeft').innerHTML = Lvalue + ""; }
+              else if(F) { Rvalue += sPoint; M = true; F = false; document.getElementById('MrsRight').innerHTML = Rvalue + ""; }
+              window.location.href = "#14";
+            }
+          }
+          else if(imgNo == 4) {
+            var i;
+            for (i = 0; i < slots.length; i++) {
+              if (!slots[i] && answer5[i] == Letter) { slots[i] = true; temp[i] = Letter; correct++; right++; }
+              else if (answer5[i] == ' ') { temp[i] = '#';}
+              else if (!slots[i] && answer5[i] != Letter) { wrong++; }
+            }
+            answer.innerHTML = ""
+            for (i = 0; i < temp.length; i++) { answer.innerHTML += temp[i]; }
+            if (right > 0) { right = 0; wrong = 0; }
+            else if (right == 0 && wrong > 0) { lives++; wrong = 0; }
+            if (correct == 6) { 
+              image.src = "images/Jet Lee/6.jpg";
+              if(M) { Lvalue += sPoint; M = false; F = true; document.getElementById('MrLeft').innerHTML = Lvalue + ""; }
+              else if(F) { Rvalue += sPoint; M = true; F = false; document.getElementById('MrsRight').innerHTML = Rvalue + ""; }
+              window.location.href = "#14";
+            }
+          }
+          else if(imgNo == 5) {
+            var i;
+            for (i = 0; i < slots.length; i++) {
+              if (!slots[i] && answer6[i] == Letter) { slots[i] = true; temp[i] = Letter; correct++; right++; }
+              else if (answer6[i] == ' ') { temp[i] = '#';}
+              else if (!slots[i] && answer6[i] != Letter) { wrong++; }
+            }
+            answer.innerHTML = ""
+            for (i = 0; i < temp.length; i++) { answer.innerHTML += temp[i]; }
+            if (right > 0) { right = 0; wrong = 0; }
+            else if (right == 0 && wrong > 0) { lives++; wrong = 0; }
+            if (correct == 10) { 
+              image.src = "images/Joko Widodo/6.jpg"; 
+              if(M) { Lvalue += sPoint; M = false; F = true; document.getElementById('MrLeft').innerHTML = Lvalue + ""; }
+              else if(F) { Rvalue += sPoint; M = true; F = false; document.getElementById('MrsRight').innerHTML = Rvalue + ""; }
+              window.location.href = "#14";
+            }
+          }
+          else if(imgNo == 6) {
+            var i;
+            for (i = 0; i < slots.length; i++) {
+              if (!slots[i] && answer7[i] == Letter) { slots[i] = true; temp[i] = Letter; correct++; right++; }
+              else if (answer7[i] == ' ') { temp[i] = '#';}
+              else if (!slots[i] && answer7[i] != Letter) { wrong++; }
+            }
+            answer.innerHTML = ""
+            for (i = 0; i < temp.length; i++) { answer.innerHTML += temp[i]; }
+            if (right > 0) { right = 0; wrong = 0; }
+            else if (right == 0 && wrong > 0) { lives++; wrong = 0; }
+            if (correct == 9) { 
+              image.src = "images/Katy Perry/6.jpg";
+              if(M) { Lvalue += sPoint; M = false; F = true; document.getElementById('MrLeft').innerHTML = Lvalue + ""; }
+              else if(F) { Rvalue += sPoint; M = true; F = false; document.getElementById('MrsRight').innerHTML = Rvalue + ""; }
+              window.location.href = "#14";
+            }
+          }
+          else if(imgNo == 7) {
+            var i;
+            for (i = 0; i < slots.length; i++) {
+              if (!slots[i] && answer8[i] == Letter) { slots[i] = true; temp[i] = Letter; correct++; right++; }
+              else if (answer8[i] == ' ') { temp[i] = '#';}
+              else if (!slots[i] && answer8[i] != Letter) { wrong++; }
+            }
+            answer.innerHTML = ""
+            for (i = 0; i < temp.length; i++) { answer.innerHTML += temp[i]; }
+            if (right > 0) { right = 0; wrong = 0; }
+            else if (right == 0 && wrong > 0) { lives++; wrong = 0; }
+            if (correct == 6) { 
+              image.src = "images/Mr Bean/6.jpg";
+              if(M) { Lvalue += sPoint; M = false; F = true; document.getElementById('MrLeft').innerHTML = Lvalue + ""; }
+              else if(F) { Rvalue += sPoint; M = true; F = false; document.getElementById('MrsRight').innerHTML = Rvalue + ""; } 
+              window.location.href = "#14";
+            }
+          }
+          else if(imgNo == 8) {
+            var i;
+            for (i = 0; i < slots.length; i++) {
+              if (!slots[i] && answer9[i] == Letter) { slots[i] = true; temp[i] = Letter; correct++; right++; }
+              else if (answer9[i] == ' ') { temp[i] = '#';}
+              else if (!slots[i] && answer9[i] != Letter) { wrong++; }
+            }
+            answer.innerHTML = ""
+            for (i = 0; i < temp.length; i++) { answer.innerHTML += temp[i]; }
+            if (right > 0) { right = 0; wrong = 0; }
+            else if (right == 0 && wrong > 0) { lives++; wrong = 0; }
+            if (correct == 9) { 
+              image.src = "images/Vin Diesel/6.jpg";
+              if(M) { Lvalue += sPoint; M = false; F = true; document.getElementById('MrLeft').innerHTML = Lvalue + ""; }
+              else if(F) { Rvalue += sPoint; M = true; F = false; document.getElementById('MrsRight').innerHTML = Rvalue + ""; } 
+              window.location.href = "#14";
+            }
+          }
+          else if(imgNo == 9) {
+            var i;
+            for (i = 0; i < slots.length; i++) {
+              if (!slots[i] && answer10[i] == Letter) { slots[i] = true; temp[i] = Letter; correct++; right++; }
+              else if (answer10[i] == ' ') { temp[i] = '#';}
+              else if (!slots[i] && answer10[i] != Letter) { wrong++; }
+            }
+            answer.innerHTML = ""
+            for (i = 0; i < temp.length; i++) { answer.innerHTML += temp[i]; }
+            if (right > 0) { right = 0; wrong = 0; }
+            else if (right == 0 && wrong > 0) { lives++; wrong = 0; }
+            if (correct == 7) { 
+              image.src = "images/William/6.jpg"; 
+              if(M) { Lvalue += sPoint; M = false; F = true; document.getElementById('MrLeft').innerHTML = Lvalue + ""; }
+              else if(F) { Rvalue += sPoint; M = true; F = false; document.getElementById('MrsRight').innerHTML = Rvalue + ""; }
+              window.location.href = "#14";
+            }
+          }
+          sPoint = sPoint - lives;
+          document.getElementsByClassName('sRect')[sPoint].style.backgroundColor = 'rgb(' + 0 + ',' + 64 + ',' + 96 + ')';
+          document.getElementsByClassName('point')[0].innerHTML = sPoint + "";
+          if(sPoint == 0) { 
+            if (imgNo == 0) { image.src = "images/Barack Obama/6.jpg"; }
+            else if (imgNo == 1) { image.src = "images/David Beckham/6.jpg"; }
+            else if (imgNo == 2) { image.src = "images/Pewdiepie/6.jpg"; }
+            else if (imgNo == 3) { image.src = "images/Jackie Chan/6.jpg"; }
+            else if (imgNo == 4) { image.src = "images/Jet Lee/6.jpg"; }
+            else if (imgNo == 5) { image.src = "images/Joko Widodo/6.jpg"; }
+            else if (imgNo == 6) { image.src = "images/Katy  Perry/6.jpg"; }
+            else if (imgNo == 7) { image.src = "images/Mr Bean/6.jpg"; }
+            else if (imgNo == 8) { image.src = "images/Vin Diesel/6.jpg"; }
+            else { image.src = "images/William/6.jpg"; }
+          }
+        }
+      }
+
+      function slot() {
+        if(!sloted && imgNo == 0) {
+          var i;
+          temp = new Array(12);
+          slots = new Array(12);
+          for (i = 0; i < temp.length; i++) { temp[i] = " _ "; }
+          for (i = 0; i < slots.length; i++) { slots[i] = false; }  
+        }
+        else if(!sloted && imgNo == 1) {
+          var i;
+          temp = new Array(13);
+          slots = new Array(13);
+          for (i = 0; i < temp.length; i++) { temp[i] = " _ "; }
+          for (i = 0; i < slots.length; i++) { slots[i] = false; }  
+        }
+        else if(!sloted && imgNo == 2) {
+          var i;
+          temp = new Array(9);
+          slots = new Array(9);
+          for (i = 0; i < temp.length; i++) { temp[i] = " _ "; }
+          for (i = 0; i < slots.length; i++) { slots[i] = false; }  
+        }
+        else if(!sloted && (imgNo == 3 || imgNo == 5)) {
+          var i;
+          temp = new Array(11);
+          slots = new Array(11);
+          for (i = 0; i < temp.length; i++) { temp[i] = " _ "; }
+          for (i = 0; i < slots.length; i++) { slots[i] = false; }  
+        }
+        else if(!sloted && (imgNo == 4 || imgNo == 7 || imgNo == 9)) {
+          var i;
+          temp = new Array(7);
+          slots = new Array(7);
+          for (i = 0; i < temp.length; i++) { temp[i] = " _ "; }
+          for (i = 0; i < slots.length; i++) { slots[i] = false; }  
+        }
+        else if(!sloted && (imgNo == 6 || imgNo == 8)) {
+          var i;
+          temp = new Array(10);
+          slots = new Array(10);
+          for (i = 0; i < temp.length; i++) { temp[i] = " _ "; }
+          for (i = 0; i < slots.length; i++) { slots[i] = false; }  
+        }
+        sloted = true;
+      }
+
+      function hinted() {
+        if (!nohint && sHint > 0) {
+          hint++;
+          if(imgNo == 0 ) { 
+            if(hint == 1) { image.src = "images/Barack Obama/2.jpg"; }
+            else if(hint == 2) { image.src = "images/Barack Obama/3.jpg"; }
+            else if(hint == 3) { image.src = "images/Barack Obama/4.jpg"; }
+            else if(hint == 4) { image.src = "images/Barack Obama/5.jpg"; }
+            else if(hint == 5) { image.src = "images/Barack Obama/6.jpg"; }
+          }
+          if(imgNo == 1) { 
+            if(hint == 1) { image.src = "images/David Beckham/2.jpg"; }
+            else if(hint == 2) { image.src = "images/David Beckham/3.jpg"; }
+            else if(hint == 3) { image.src = "images/David Beckham/4.jpg"; }
+            else if(hint == 4) { image.src = "images/David Beckham/5.jpg"; }
+            else if(hint == 5) { image.src = "images/David Beckham/6.jpg"; }
+          }
+          if(imgNo == 2) { 
+            if(hint == 1) { image.src = "images/Pewdiepie/2.jpg"; }
+            else if(hint == 2) { image.src = "images/Pewdiepie/3.jpg"; }
+            else if(hint == 3) { image.src = "images/Pewdiepie/4.jpg"; }
+            else if(hint == 4) { image.src = "images/Pewdiepie/5.jpg"; }
+            else if(hint == 5) { image.src = "images/Pewdiepie/6.jpg"; }
+          }
+          if(imgNo == 3) { 
+            if(hint == 1) { image.src = "images/Jackie Chan/2.jpg"; }
+            else if(hint == 2) { image.src = "images/Jackie Chan/3.jpg"; }
+            else if(hint == 3) { image.src = "images/Jackie Chan/4.jpg"; }
+            else if(hint == 4) { image.src = "images/Jackie Chan/5.jpg"; }
+            else if(hint == 5) { image.src = "images/Jackie Chan/6.jpg"; }
+          }
+          if(imgNo == 4) { 
+            if(hint == 1) { image.src = "images/Jet Lee/2.jpg"; }
+            else if(hint == 2) { image.src = "images/Jet Lee/3.jpg"; }
+            else if(hint == 3) { image.src = "images/Jet Lee/4.jpg"; }
+            else if(hint == 4) { image.src = "images/Jet Lee/5.jpg"; }
+            else if(hint == 5) { image.src = "images/Jet Lee/6.jpg"; }
+          }
+          if(imgNo == 5) { 
+            if(hint == 1) { image.src = "images/Joko Widodo/2.jpg"; }
+            else if(hint == 2) { image.src = "images/Joko Widodo/3.jpg"; }
+            else if(hint == 3) { image.src = "images/Joko Widodo/4.jpg"; }
+            else if(hint == 4) { image.src = "images/Joko Widodo/5.jpg"; }
+            else if(hint == 5) { image.src = "images/Joko Widodo/6.jpg"; }
+          }
+          if(imgNo == 6) { 
+            if(hint == 1) { image.src = "images/Katy Perry/2.jpg"; }
+            else if(hint == 2) { image.src = "images/Katy Perry/3.jpg"; }
+            else if(hint == 3) { image.src = "images/Katy Perry/4.jpg"; }
+            else if(hint == 4) { image.src = "images/Katy Perry/5.jpg"; }
+            else if(hint == 5) { image.src = "images/Katy Perry/6.jpg"; }
+          }
+          if(imgNo == 7) { 
+            if(hint == 1) { image.src = "images/Mr Bean/2.jpg"; }
+            else if(hint == 2) { image.src = "images/Mr Bean/3.jpg"; }
+            else if(hint == 3) { image.src = "images/Mr Bean/4.jpg"; }
+            else if(hint == 4) { image.src = "images/Mr Bean/5.jpg"; }
+            else if(hint == 5) { image.src = "images/Mr Bean/6.jpg"; }
+          }
+          if(imgNo == 8) { 
+            if(hint == 1) { image.src = "images/Vin Diesel/2.jpg"; }
+            else if(hint == 2) { image.src = "images/Vin Diesel/3.jpg"; }
+            else if(hint == 3) { image.src = "images/Vin Diesel/4.jpg"; }
+            else if(hint == 4) { image.src = "images/Vin Diesel/5.jpg"; }
+            else if(hint == 5) { image.src = "images/Vin Diesel/6.jpg"; }
+          }
+          if(imgNo == 9) { 
+            if(hint == 1) { image.src = "images/William/2.jpg"; }
+            else if(hint == 2) { image.src = "images/William/3.jpg"; }
+            else if(hint == 3) { image.src = "images/William/4.jpg"; }
+            else if(hint == 4) { image.src = "images/William/5.jpg"; }
+            else if(hint == 5) { image.src = "images/William/6.jpg"; }
+          }
+          sHint--;
+          document.getElementsByClassName('bar')[sHint].style.backgroundColor = "silver";
+        }
+        else { nohint = true; }
+      }
+
+      function resulted() {
+        if (Lvalue < Rvalue) { document.getElementsById('result').innerHTML = "Mrs. Right Wins !"; }
+        else if (Lvalue > Rvalue) { document.getElementsById('result').innerHTML = "Mr. Left Wins !"; }
+        else if (Lvalue == Rvalue) { document.getElementsById('result').innerHTML = "It's A Draw !"; }
+      }
+ 
+    script(src='build/build.js')

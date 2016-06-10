@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-slide_width = 980px
-=======
-slide_width = 1000px
->>>>>>> 9a6a74b57ff46a76a486ce023c39473f3c3629ed
-slide_height = 480px
+
+slide_width = 100%
+slide_height = 640px
 slide_background = #FFFFFFF
 
 slide_transition_length = .6s
@@ -192,11 +189,8 @@ body
 .kiri
   margin-right: 300px
 .kanan
-<<<<<<< HEAD
   margin-top: -350px
-=======
   margin-top: -355px
->>>>>>> 9a6a74b57ff46a76a486ce023c39473f3c3629ed
   margin-left: 300px
 
 .kotak
@@ -236,25 +230,31 @@ body
   font-family: century gothic
 
 .kotak:hover
-  color: yellow
+  color: blue
   background-color: yellow
 .hasil
   font-weight: bold
   color: red
 .hasill
   color: red
-<<<<<<< HEAD
   
-#gambar
+.image
   width : 360px
   height : 240px
-  margin : 10px 20px
-  background-color : red
+  margin : 0px 15px
+  background-color : black
+  float : left
+
+#gambar
+  width : 100%
+  height : 100%
 
 .keyboard
   width : 650px
   height : 95px
   background-color : #C0C0C0
+  position : relative;
+  top : -2px;
 
 .keys
   width : 40px
@@ -268,21 +268,30 @@ body
   position : relative
   top : 0px
 
-.keys:active
+.choose:active
   top : 5px
-  box-shadow : 0px 0px #006000
+  box-shadow : 0px 0px
+
+.used
+  background-color : #C040F0
+  box-shadow : 0px 5px #9030B0
+  color : white
 
 .ansboard
   width : 650px
   height : 45px
-  font-size : 36px
+  font-size : 32px
   background-color : #909090
+  color : white;
+  position : relative;
+  top : -2px;
 
 .ans
   width : 420px
   height : 35px
   margin : 5px 5px 5px 10px
   background-color : #606060
+  line-height : 30px;
   float : left
 
 #letter
@@ -290,7 +299,7 @@ body
   height : 45px
   float : right
   background-color : #909090
-=======
+
 .margin
   margin-left: 500px  
 .margins
@@ -372,7 +381,125 @@ body
   margin-left: -100 px
 .margins:hover
   opacity: 1
->>>>>>> 9a6a74b57ff46a76a486ce023c39473f3c3629ed
+
+#MrLeft, #MrsRight {
+  text-align : center;
+  line-height : 60px;
+  font-size : 48px;
+  color : white;
+}
+
+#MrLeft {
+  width : 80px;
+  height : 80px;
+  background-color : blue;
+  position : relative;
+  top : 90px;
+  left : -610px;
+}
+
+#MrsRight {
+  width : 80px;
+  height : 80px;
+  background-color : magenta;
+  position : relative;
+  top : 10px;
+  left : 620px;
+}
+
+.kiri{
+  position : relative;
+  top : 0px;
+}
+
+.kanan{
+  position : relative;
+  top : 60px;
+}
+
+.gabung {
+  width : 650px;
+  height : 240px;
+  background-color : white;
+  padding : 0px 10px;
+}
+
+.chint {
+  width : 120px;
+  height : 220px;
+  margin : 10px 0px;
+  background-color : limegreen;
+  float : left;
+}
+
+.first
+  margin : 10px 10px 5px;
+
+.last
+  margin : 5px 10px 10px;
+
+.bar
+  width : 100px
+  height : 32px
+  margin : 10px
+  background-color : lime
+  line-height : 32px
+
+.score {
+  width : 120px;
+  height : 220px;
+  margin : 10px 0px;
+  background-color : #0080C0; 
+  color : white;
+  float : left;
+}
+
+.sTitle {
+  width : 120px;
+  height : 90px;
+  background-color : #006090;
+  line-height : 90px;
+  font-size : 48px;
+}
+
+.sBar {
+  width : 120px;
+  height : 90px; 
+  background-color : #004060; 
+  padding : 5px;
+}
+
+.sRect {
+  width : 12px;
+  height : 30px;
+  background-color : white;
+  margin : 5px;
+  float : left;
+}
+
+.sPoint {
+  width : 120px;
+  height : 40px;
+  background-color : #006090; 
+  line-height : 40px;
+  font-size : 24px;
+}
+
+.sleft, .point, .sright {
+  width : 40px
+  height : 40px
+  float : left
+}
+.sleft, .sright {
+  background-color : #005080
+}
+
+.full {
+  width : 100%
+  height : 100%
+  padding : 50px 0px
+}
 
 @import 'prism/themes/prism-okaidia.css'
 // Check out "bower_components/prism/themes/" for available themes
+
